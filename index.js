@@ -20,25 +20,25 @@
  * })
  */
 module.exports = {
-  options: require.resolve("./config/options"),
+  options: require("./config/options"),
   bases: {
-    base: require.resolve("./config/base"),
-    development: require.resolve("./config/development.base"),
-    production: require.resolve("./config/production.base"),
-    staging: require.resolve("./config/staging.base"),
+    base: require("./config/base"),
+    development: require("./config/development.base"),
+    production: require("./config/production.base"),
+    staging: require("./config/staging.base"),
   },
   client: {
-    base: require.resolve("./config/client/base"),
-    development: require.resolve("./config/client/development"),
-    shared: require.resolve("./config/client/shared.base"),
-    production: require.resolve("./config/client/production"),
-    staging: require.resolve("./config/client/staging"),
+    base: require("./config/client/base"),
+    development: require("./config/client/development"),
+    shared: require("./config/client/shared.base"),
+    production: require("./config/client/production"),
+    staging: require("./config/client/staging"),
   },
   server: {
-    base: require.resolve("./config/server/base"),
-    development: require.resolve("./config/server/development"),
-    shared: require.resolve("./config/server/shared.base"),
-    production: require.resolve("./config/server/production"),
-    staging: require.resolve("./config/server/staging"),
+    base: require("./config/server/base"),
+    development: require("./config/server/development"),
+    shared: require("./config/server/shared.base"),
+    production: require("./config/server/production"),
+    staging: require("./config/server/staging"),
   }
 }
