@@ -8,6 +8,7 @@
     "url": "https://github.com/alexseitsinger/react-ssr-webpack-config/issues"
   },
   "dependencies": {
+    "@hot-loader/react-dom": "^16.8.6",
     "dotenv-webpack": "1.7.0",
     "mini-css-extract-plugin": "0.7.0",
     "webpack-bundle-tracker": "0.4.2-beta",
@@ -17,6 +18,7 @@
   },
   "description": "Webpack config for server-side rendered projects.",
   "devDependencies": {
+    "react": "^16.8.6",
     "webpack": "4.35.0"
   },
   "files": [
