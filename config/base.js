@@ -3,7 +3,7 @@ const Dotenv = require("dotenv-webpack")
 
 //const FRONTEND_DIR = path.dirname(__dirname)
 // <project_root>/node_modules/@alexseitsinger/react-ssr-webpack-config/config
-const PROJECT_ROOT = path.resolve("../../../../")
+const PROJECT_ROOT = path.resolve(".")
 
 module.exports = {
   // Keep filenames precise, standardized, and short.
