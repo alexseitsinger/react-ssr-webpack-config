@@ -1,0 +1,47 @@
+{
+  "author": {
+    "email": "software@alexseitsinger.com",
+    "name": "Alex Seitsinger",
+    "url": "https://www.alexseitsinger.com"
+  },
+  "bugs": {
+    "url": "https://github.com/alexseitsinger/react-ssr-webpack-config/issues"
+  },
+  "dependencies": {
+    "dotenv-webpack": "1.7.0",
+    "mini-css-extract-plugin": "0.7.0",
+    "webpack-bundle-tracker": "0.4.2-beta",
+    "webpack-merge": "4.2.1",
+    "webpack-node-externals": "1.7.2",
+    "webpack-s3-plugin": "1.0.3"
+  },
+  "description": "Webpack config for server-side rendered projects.",
+  "devDependencies": {
+    "webpack": "4.35.0"
+  },
+  "files": [
+    "index.js",
+    "config/",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "homepage": "https://www.alexseitsinger.com/packages/node/react-ssr-webpack-config",
+  "keywords": [
+    "webpack"
+  ],
+  "license": "BSD-2-Clause",
+  "main": "index.js",
+  "name": "@alexseitsinger/react-ssr-webpack-config",
+  "peerDependencies": {
+    "webpack": "^4.29.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexseitsinger/react-ssr-webpack-config.git"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/jest"
+  },
+  "version": "0.0.0"
+}
