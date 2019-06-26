@@ -5,9 +5,9 @@
  * A collection of objects that can be used for Webpack.
  *
  * @example
- * const webpackConfig = require("@alexseitsinger/react-ssr-webpack-config")
+ * const configs = require("@alexseitsinger/react-ssr-webpack-config")
  *
- * module.exports = webpackConfig.client.development
+ * module.exports = configs.client.development
  */
 module.exports = {
   options: require("./configs/options"),
