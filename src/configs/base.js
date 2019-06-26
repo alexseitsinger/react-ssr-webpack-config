@@ -13,12 +13,6 @@ module.exports = {
   },
   module: {
     rules: [
-      /**
-       * Use babel for for all javascript files we create.
-       *
-       * Dont use the compiler for already compiled modules found in the
-       * node_modules folder.
-       */
       {
         test: /\.jsx?$/,
         use: "babel-loader",
