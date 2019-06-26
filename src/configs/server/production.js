@@ -6,15 +6,15 @@ const options = require("../options")
 const productionBaseConfig = require("../production.base")
 const sharedBaseConfig = require("./shared.base")
 
-const settings = options.getSettings({
+const generated = options.generate({
   agent: "server",
   environment: "production",
 })
 
 module.exports = merge.smart(productionBaseConfig, sharedBaseConfig, {
   output: {
-    path: settings.outputPath,
-    publicPath: settings.publicPath,
+    path: generated.outputPath,
+    publicPath: generated.publicPath,
   },
   module: {
     rules: [
@@ -27,7 +27,7 @@ module.exports = merge.smart(productionBaseConfig, sharedBaseConfig, {
             options: {
               emitFile: false,
               name: "images/[sha512:hash:base64:7].[ext]",
-              publicPath: settings.clientPublicPath,
+              publicPath: generated.clientPublicPath,
             },
           },
         ],
@@ -41,7 +41,7 @@ module.exports = merge.smart(productionBaseConfig, sharedBaseConfig, {
             options: {
               emitFile: false,
               name: "fonts/[sha512:hash:base64:7].[ext]",
-              publicPath: settings.clientPublicPath,
+              publicPath: generated.clientPublicPath,
             },
           },
         ],

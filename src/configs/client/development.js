@@ -6,15 +6,15 @@ const options = require("../options")
 const developmentBaseConfig = require("../development.base")
 const clientBaseConfig = require("./base")
 
-const settings = options.getSettings({
+const generated = options.generate({
   agent: "client",
   environment: "development",
 })
 
 module.exports = merge.smart(developmentBaseConfig, clientBaseConfig, {
   output: {
-    path: settings.outputPath,
-    publicPath: settings.publicPath,
+    path: generated.outputPath,
+    publicPath: generated.publicPath,
     crossOriginLoading: "anonymous",
   },
   resolve: {
@@ -44,14 +44,14 @@ module.exports = merge.smart(developmentBaseConfig, clientBaseConfig, {
   devtool: "cheap-module-source-map",
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new BundleTracker({ filename: settings.webpackStats }),
+    new BundleTracker({ filename: generated.webpackStats }),
   ],
   devServer: {
-    host: settings.devServer.host,
-    port: settings.devServer.port,
+    host: generated.devServer.host,
+    port: generated.devServer.port,
     historyApiFallback: true,
     // Serve staticfiles from django, not express. (default: /)
-    publicPath: settings.publicPath,
+    publicPath: generated.publicPath,
     // Disable serving static content from webpack. (we use Django)
     contentBase: false,
     watchContentBase: false,

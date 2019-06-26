@@ -1,6 +1,6 @@
 const path = require("path")
 
-const config = {
+const initial = {
   names: {
     project: process.env.PROJECT_NAME,
     site: process.env.SITE_NAME,
@@ -29,13 +29,13 @@ function getDevServerAddress(agentName) {
 }
 
 function getBucketName(agentName, environmentName) {
-  const prefix = `${config.names.project}-${config.names.site}`
+  const prefix = `${initial.names.project}-${initial.names.site}`
   const suffix = `${environmentName}-static`
   return `${prefix}-${suffix}`
 }
 
 function getDistDir(agentName, environmentName) {
-  return `${config.names.dist}/${agentName}/${environmentName}`
+  return `${initial.names.dist}/${agentName}/${environmentName}`
 }
 
 function getOutputPath(agentName, environmentName) {
@@ -56,7 +56,7 @@ function getPublicPath(agentName, environmentName) {
     case ("production" || "staging"): {
       const awsUri = "s3.amazonaws.com"
       const bucketName = getBucketName(agentName, environmentName)
-      return `https://${bucketName}.${awsUri}/${config.names.dist}/`
+      return `https://${bucketName}.${awsUri}/${initial.names.dist}/`
     }
   }
 }
@@ -66,7 +66,7 @@ function getWebpackStatsPath(agentName, environmentName) {
   return `./${name}`
 }
 
-function getSettings({ agent, environment }) {
+function generate({ agent, environment }) {
   const sentryDsn = getSentryDsn(environment)
   const devServer = getDevServerAddress(agent)
   const bucketName = getBucketName(agent, environment)
@@ -89,6 +89,6 @@ function getSettings({ agent, environment }) {
 }
 
 module.exports = {
-  config,
-  getSettings,
+  initial,
+  generate,
 }

@@ -6,7 +6,7 @@ const options = require("../options")
 const developmentBaseConfig = require("../development.base")
 const serverBaseConfig = require("./base")
 
-const settings = options.getSettings({
+const generated = options.generate({
   agent: "server",
   environment: "development",
 })
@@ -37,7 +37,7 @@ module.exports = merge.smart(developmentBaseConfig, serverBaseConfig, {
             options: {
               emitFile: false,
               name: "images/[sha512:hash:base64:7].[ext]",
-              publicPath: settings.clientPublicPath,
+              publicPath: generated.clientPublicPath,
             },
           },
         ],
@@ -51,7 +51,7 @@ module.exports = merge.smart(developmentBaseConfig, serverBaseConfig, {
             options: {
               emitFile: false,
               name: "fonts/[sha512:hash:base64:7].[ext]",
-              publicPath: settings.clientPublicPath,
+              publicPath: generated.clientPublicPath,
             },
           },
         ],
@@ -59,7 +59,7 @@ module.exports = merge.smart(developmentBaseConfig, serverBaseConfig, {
     ],
   },
   output: {
-    path: settings.outputPath,
-    publicPath: settings.publicPath,
+    path: generated.outputPath,
+    publicPath: generated.publicPath,
   },
 })
