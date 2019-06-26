@@ -26,27 +26,22 @@ module.exports = merge.smart(developmentBaseConfig, clientBaseConfig, {
     rules: [
       {
         test: /\.css$/,
-        include: /node_modules/,
-        use: ["style-loader", "css-loader"],
-      },
-      {
-        test: /\.css$/,
-        exclude: /node_modules/,
         use: [
           "style-loader",
           {
             loader: "css-loader",
             options: {
-              modules: true,
-              /**
-               * Use a more verbose name in development for CSS classes for easy
-               * debugging. They should match the same pattern used in
-               * server-side rendering classNames.
-               *
-               * (eg: Note the third '_' in the second set of underscores)
-               */
-              localIdentName: "[name]__[local]__[hash:base64:5]",
-              context: __dirname,
+              modules: {
+                /**
+                 * Use a more verbose name in development for CSS classes for easy
+                 * debugging. They should match the same pattern used in
+                 * server-side rendering classNames.
+                 *
+                 * (eg: Note the third '_' in the second set of underscores)
+                 */
+                localIdentName: "[name]__[local]___[hash:base64:5]",
+                context: __dirname,
+              },
             },
           },
         ],

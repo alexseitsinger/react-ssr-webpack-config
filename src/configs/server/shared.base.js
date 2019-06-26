@@ -9,20 +9,14 @@ module.exports = merge.smart(serverBaseConfig, {
     rules: [
       {
         test: /\.css$/,
-        include: /node_modules/,
-        use: ["css-loader"],
-      },
-      {
-        test: /\.css$/,
-        exclude: /node_modules/,
         use: [
           {
             loader: "css-loader",
             options: {
-              modules: true,
-              minimize: true,
-              context: __dirname,
-              localIdentName: "[hash:base64:5]",
+              modules: {
+                context: __dirname,
+                localIdentName: "[hash:base64:5]",
+              },
             },
           },
         ],

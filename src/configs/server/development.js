@@ -16,19 +16,14 @@ module.exports = merge.smart(developmentBaseConfig, serverBaseConfig, {
     rules: [
       {
         test: /\.css$/,
-        include: /node_modules/,
-        use: ["css-loader"],
-      },
-      {
-        test: /\.css$/,
-        exclude: /node_modules/,
         use: [
           {
             loader: "css-loader",
             options: {
-              modules: true,
-              context: __dirname,
-              localIdentName: "[name]__[local]__[hash:base64:5]",
+              modules: {
+                context: __dirname,
+                localIdentName: "[name]__[local]___[hash:base64:5]",
+              },
             },
           },
         ],

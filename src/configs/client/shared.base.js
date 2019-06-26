@@ -13,24 +13,15 @@ module.exports = merge.smart(clientBaseConfig, {
     rules: [
       {
         test: /\.css$/,
-        include: /node_modules/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-        ],
-      },
-      {
-        test: /\.css$/,
-        exclude: /node_modules/,
         use: [
           MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
             options: {
-              modules: true,
-              minimize: true,
-              context: __dirname,
-              localIdentName: "[hash:base64:5]",
+              modules: {
+                context: __dirname,
+                localIdentName: "[hash:base64:5]",
+              },
             },
           },
         ],
