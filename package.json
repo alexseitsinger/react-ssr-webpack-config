@@ -8,7 +8,7 @@
     "url": "https://github.com/alexseitsinger/react-ssr-webpack-config/issues"
   },
   "dependencies": {
-    "@hot-loader/react-dom": "^16.8.6",
+    "@hot-loader/react-dom": "16.8.6",
     "dotenv-webpack": "1.7.0",
     "mini-css-extract-plugin": "0.7.0",
     "webpack-bundle-tracker": "0.4.2-beta",
@@ -18,12 +18,11 @@
   },
   "description": "Webpack config for server-side rendered projects.",
   "devDependencies": {
-    "react": "^16.8.6",
+    "react": "16.8.6",
     "webpack": "4.35.0"
   },
   "files": [
-    "index.js",
-    "config/",
+    "src/",
     "package.json",
     "README.md",
     "LICENSE"
@@ -33,17 +32,19 @@
     "webpack"
   ],
   "license": "BSD-2-Clause",
-  "main": "index.js",
+  "main": "src/index.js",
   "name": "@alexseitsinger/react-ssr-webpack-config",
   "peerDependencies": {
-    "webpack": "^4.29.6"
+    "webpack": "^4.29.6",
+    "webpack-dev-server": "^3.7.2",
+    "css-loader": "^3.0.0",
+    "style-loader": "^0.23.1",
+    "file-loader": "^4.0.0",
+    "babel-loader": "^8.0.6"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/alexseitsinger/react-ssr-webpack-config.git"
-  },
-  "scripts": {
-    "test": "./node_modules/.bin/jest"
   },
   "version": "0.1.0"
 }
