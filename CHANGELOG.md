@@ -1,5 +1,8 @@
-<a name="v0.1.1"></a>
-## [v0.1.1](https://github.com/alexseitsinger/react-ssr-webpack-config/compare/v0.1.0...v0.1.1)
+<a name="v0.2.0"></a>
+## [v0.2.0](https://github.com/alexseitsinger/react-ssr-webpack-config/compare/v0.1.0...v0.2.0) (2019-06-26)
+
+### Code Refactoring
+- Moves into src directory. ([0c5a51b](https://github.com/alexseitsinger/react-ssr-webpack-config/commit/0c5a51b34fcaa84e6434b1904a966208551d0d51))
 
 
 <a name="v0.1.0"></a>
