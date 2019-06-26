@@ -1,8 +1,16 @@
 /**
- * The config objects to use for Webpack.
+ * The config objects to use with Webpack.
  *
- * @return {object}
- * A collection of objects that can be used for Webpack.
+ * @name configs
+ *
+ * @property {object} client
+ * @property {object} client.development
+ * @property {object} client.production
+ * @property {object} client.staging
+ * @property {object} server
+ * @property {object} server.development
+ * @property {object} server.production
+ * @property {object} server.staging
  *
  * @example
  * const configs = require("@alexseitsinger/react-ssr-webpack-config")
@@ -10,23 +18,12 @@
  * module.exports = configs.client.development
  */
 module.exports = {
-  options: require("./configs/options"),
-  bases: {
-    base: require("./configs/base"),
-    development: require("./configs/development.base"),
-    production: require("./configs/production.base"),
-    staging: require("./configs/staging.base"),
-  },
   client: {
-    base: require("./configs/client/base"),
-    shared: require("./configs/client/shared.base"),
     development: require("./configs/client/development"),
     production: require("./configs/client/production"),
     staging: require("./configs/client/staging"),
   },
   server: {
-    base: require("./configs/server/base"),
-    shared: require("./configs/server/shared.base"),
     development: require("./configs/server/development"),
     production: require("./configs/server/production"),
     staging: require("./configs/server/staging"),
