@@ -35,16 +35,16 @@
   "main": "src/index.js",
   "name": "@alexseitsinger/react-ssr-webpack-config",
   "peerDependencies": {
-    "webpack": "^4.29.6",
-    "webpack-dev-server": "^3.7.2",
+    "babel-loader": "^8.0.6",
     "css-loader": "^3.0.0",
-    "style-loader": "^0.23.1",
     "file-loader": "^4.0.0",
-    "babel-loader": "^8.0.6"
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-dev-server": "^3.7.2"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/alexseitsinger/react-ssr-webpack-config.git"
   },
-  "version": "0.1.0"
+  "version": "0.2.0"
 }
