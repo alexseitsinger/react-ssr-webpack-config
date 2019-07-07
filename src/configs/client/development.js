@@ -26,8 +26,29 @@ module.exports = merge.smart(developmentBaseConfig, clientBaseConfig, {
     rules: [
       {
         test: /\.css$/,
+        include: /node_modules/,
         use: [
-          "style-loader",
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
+                context: __dirname,
+                localIdentName: "[local]",
+              },
+            },
+          },
+        ],
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: "style-loader",
+          },
           {
             loader: "css-loader",
             options: {
