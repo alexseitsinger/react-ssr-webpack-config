@@ -32,8 +32,8 @@ module.exports = merge.smart(developmentBaseConfig, clientBaseConfig, {
             loader: "css-loader",
             options: {
               modules: {
-                localIdentName: "[name]__[local]___[hash:base64:5]",
                 context: __dirname,
+                localIdentName: "[name]__[local]___[hash:base64:5]",
               },
             },
           },
