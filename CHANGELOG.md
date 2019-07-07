@@ -1,3 +1,10 @@
+<a name="v1.0.2"></a>
+## [v1.0.2](https://github.com/alexseitsinger/react-ssr-webpack-config/compare/v1.0.1...v1.0.2) (2019-07-07)
+
+### Bug Fixes
+- Adds extra rules for node_mods vs local mods. ([2f65be1](https://github.com/alexseitsinger/react-ssr-webpack-config/commit/2f65be1aa7a7be816ebe9f1cb99d9557825ec107))
+
+
 <a name="v1.0.1"></a>
 ## [v1.0.1](https://github.com/alexseitsinger/react-ssr-webpack-config/compare/v1.0.0...v1.0.1) (2019-07-07)
 
