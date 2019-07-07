@@ -27,7 +27,7 @@ module.exports = {
       "node_modules",
     ],
     // Resolve modules using one of the following filename suffixes.
-    extensions: [".js", ".jsx"],
+    extensions: [".js", ".jsx", ".json", ".css"],
   },
   plugins: [
     // Automatically load variable from .env file into the modules.
