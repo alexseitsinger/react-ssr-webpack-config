@@ -13,7 +13,10 @@ module.exports = merge.smart(baseConfig, {
   output: {
     libraryTarget: "commonjs2",
   },
-  externals: [nodeExternals()],
+  // If we use nodeExternals, any external CSS modules will not load using the
+  // CSS loader we specify. So, disable this or explicitly exclude the external
+  // node modulees in the site config.
+  //externals: [nodeExternals()],
   plugins: [
     new webpack.DefinePlugin({
       AGENT_NAME: JSON.stringify("server"),
