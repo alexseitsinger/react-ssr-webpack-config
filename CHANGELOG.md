@@ -1,3 +1,16 @@
+<a name="v1.0.1"></a>
+## [v1.0.1](https://github.com/alexseitsinger/react-ssr-webpack-config/compare/v1.0.0...v1.0.1) (2019-07-07)
+
+### Bug Fixes
+- Removes nodeExternals so css modules load. ([b74aa65](https://github.com/alexseitsinger/react-ssr-webpack-config/commit/b74aa652af927c6bc2340b43f16bf3f854f76eeb))
+
+### Code Refactoring
+- Adds .css to module extensions. ([a44efd0](https://github.com/alexseitsinger/react-ssr-webpack-config/commit/a44efd0d60893ece18de022dce39ca08fa5dda54))
+
+### Features
+- Adds stats options. ([855c40f](https://github.com/alexseitsinger/react-ssr-webpack-config/commit/855c40f622dc21396f542f5c554c2262c41dbaf3))
+
+
 <a name="v1.0.0"></a>
 ## [v1.0.0](https://github.com/alexseitsinger/react-ssr-webpack-config/compare/v0.2.0...v1.0.0) (2019-06-26)
 
