@@ -40,7 +40,8 @@
     "file-loader": "^4.0.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.6",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-dev-server": "^3.7.2",
+    "babel-plugin-css-modules-transform": "^1.6.2"
   },
   "repository": {
     "type": "git",
